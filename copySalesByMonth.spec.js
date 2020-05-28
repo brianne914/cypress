@@ -36,6 +36,9 @@ describe('Grow', function () {
        cy.get('.Popover---popover-target---TiAh9 > .metricMenu---item---biIfV > .isvg > svg').click()
        cy.contains('Delete').click()
        cy.contains('OK').click()
+	//log out
+      cy.get('.avatar---initials---3gz8C').click()
+      cy.contains('Log Out').click()
 })}
 )
 
