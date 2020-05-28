@@ -31,7 +31,11 @@ describe('Grow', function () {
        cy.get('.metricTile---titleBar---icjyQ').trigger('mouseover')
        cy.get('.Popover---popover-target---TiAh9 > .metricMenu---item---biIfV > .isvg > svg').click()
        cy.get('.MenuItem---menu-item---3GilO menuItem STATIC-dashboard-metric-menuOptionDelete MenuItem---delete-option---30_Qy').click()
-
+	//clean up by deleting copied metric
+       cy.get('.metricTile---titleBar---icjyQ').contains('Copy of Sales by Month').trigger('mouseover')
+       cy.get('.Popover---popover-target---TiAh9 > .metricMenu---item---biIfV > .isvg > svg').click()
+       cy.contains('Delete').click()
+       cy.contains('OK').click()
 })}
 )
 
